@@ -8,12 +8,23 @@ x = {
                        'boosted decision trees', 'pca']
 }
 
-r = ['machine learning', 'pca', 'machine learning integration']
-
 # Simple model
+r_simple = ['machine learning', 'self motivated', 'machine learning integration']
+
 anabel = AnabelSimple(x)
 anabel.visualise_experience()
-anabel.find_relevant_experience(r)
+anabel.find_relevant_experience(r_simple)
 
-# Less simple model
+# Clever model
+r_clever = ['artificial intelligence', 'self-motivation', 'optimization']
 
+"""
+use requirement distances from tags in word embedding space to rank experience relevancy
+"""
+
+# Brilliant model
+r_brill = "You must be able to do artificial intelligence, it's integration and principle component analysis"
+
+"""
+find a sequence to fixed-length-vector mapping (transformers?) and compare to tag embeddings
+"""
