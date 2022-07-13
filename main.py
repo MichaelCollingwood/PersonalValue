@@ -1,69 +1,43 @@
-# Assist cover letter writing by linking experiences with requirements for job
-
-experience = [
-    ('Chai AI Optimisation project', ['machine learning', 'instance optimisation', 'self motivated']),
-    ('Chai AI Optimisation project', ['machine learning', 'instance optimisation', 'self motivated']),
-    ('Chai AI Optimisation project', ['machine learning', 'instance optimisation', 'self motivated']),
-    ('Chai AI Optimisation project', ['machine learning', 'instance optimisation', 'self motivated']),
-    ('Chai AI Optimisation project', ['machine learning', 'instance optimisation', 'self motivated']),
-    ('Chai AI Optimisation project', ['machine learning', 'instance optimisation', 'self motivated']),
-    ('Chai AI Optimisation project', ['machine learning', 'instance optimisation', 'self motivated']),
-    ('Chai AI Optimisation project', ['machine learning', 'instance optimisation', 'self motivated']),
-    ('Chai AI Optimisation project', ['machine learning', 'instance optimisation', 'self motivated']),
-    ('Chai AI Optimisation project', ['machine learning', 'instance optimisation', 'self motivated']),
-    ('Chai AI Optimisation project', ['machine learning', 'instance optimisation', 'self motivated']),
-    ('Chai AI Optimisation project', ['machine learning', 'instance optimisation', 'self motivated']),
-    ('Chai AI Optimisation project', ['machine learning', 'instance optimisation', 'self motivated']),
-    ('Cover Letter Optimisation', ['machine learning', 'instance optimisation', 'self motivated']),
-    ('4th Yr Project', ['machine learning', 'optimisation', 'self motivated', 'production', 'machine learning integration', 'signal analysis', 'statistical inference', 'boosted decision trees', 'pca'])
-]
+import numpy as np
 
 
-def find_traits():
-    traits = []
-
-    for exp in experience:
-        traits = list(set(traits + exp[1]))
-
-    return traits
-
-
-def find_relevant_experience(requirements):
-    relevant_experience = []
-
-    for exp in experience:
-        if exp[1] in requirements:
-            if (exp[0] in relevant_experience):
-                relevant_experience[exp[0]] += 1
-            else:
-                relevant_experience[exp[0]] = 1
-
-    return relevant_experience
+x = {
+    'Chai AI Optimisation project': ['machine learning', 'instance optimisation', 'self motivated'],
+    'Cover Letter Optimisation': ['machine learning', 'instance optimisation', 'self motivated'],
+    '4th Yr Project': ['machine learning', 'optimisation', 'self motivated', 'production',
+                       'machine learning integration', 'signal analysis', 'statistical inference',
+                       'boosted decision trees', 'pca']
+}
 
 
-def table_experiences_traits():
-    max_name_len = 20
-    margin = 30
-    assert max_name_len <= margin
+def find_trait_map(experience):
+    all_traits = []
+    for traits in experience.values():
+        all_traits += traits
+    return {trait: i for i, trait in enumerate(set(all_traits))}
 
-    traits = find_traits()
-    exp_names = [exp[0] for exp in experience]
-    grid = [[trait in exp[1] for trait in traits] for exp in experience]
 
-    # print
-    grid_strings = [' | '.join([f"{str(element)}{''.join([' ']*(max_name_len-len(str(element))))}" for element in row]) + " |" for row in grid]
+class Anabel:
+    def __init__(self, experience):
+        self.trait_map = find_trait_map(experience)
+        self.exp_names = list(experience.keys())
+        self.exp_array = self.convert_to_array(experience)
 
-    traits_strings = [f"{trait[:max_name_len] + ''.join([' ']*(max_name_len-len(trait[:max_name_len])))}" for trait in traits]
-    header_string = "| " + f"{''.join([' ']*margin)}| " + ' | '.join(traits_strings) + " |"
+    def convert_to_array(self, experience):
+        exp_matrix = np.zeros((len(self.trait_map), len(experience)))
+        for i, traits in enumerate(experience.values()):
+            for trait in traits:
+                exp_matrix[self.trait_map[trait], i] = 1
 
-    entry_strings = ["| " + f"{name[:max_name_len]}{''.join([' ']*(margin-len(name[:max_name_len])))}| " for name in exp_names]
-    entry_strings = [entry + row_string for entry, row_string in zip(entry_strings, grid_strings)]
+        return exp_matrix
 
-    print(''.join(['-']*(len(header_string))))
-    print(header_string)
-    print(''.join(['-']*len(header_string)))
-    for row_string in entry_strings:
-        print(row_string)
-    print(''.join(['-'] * len(header_string)))
+    def find_relevant_experience(self, requirements):
+        cross_section = np.zeros(len(self.trait_map))
+        for requirement in requirements:
+            cross_section[self.trait_map[requirement]] = 1
 
-# table_experiences_traits()
+        values = np.matmul(cross_section, self.exp_array)
+        return {name: value for name, value in zip(self.exp_names, values)}
+
+
+print(Anabel(x).find_relevant_experience(['machine learning', 'pca', 'machine learning integration']))
