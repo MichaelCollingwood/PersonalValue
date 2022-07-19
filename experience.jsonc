@@ -1,0 +1,192 @@
+{
+    "Cyted AI" : {
+        "Company Description" : "Start-up providing novel diagnostic tests to drive the earlier detection of disease using novel sampling technologies & AI-driven biomarkers to unlock clinical insight & improve patient outcomes. Led by laboratory processes, developing an event-driven system reporting on imaged Cytosponge samples from laboratories to NHS Scotland. £8.7mn funding with a tech team of 7.",
+        "Role Name" : "Software Engineer",
+        "Role Type" : "Full-time",
+        "Description" : "Developed code in Kotlin (JVM Language) with end-to-end browser testing",
+        "Dates" : ["28/02/2022", "present"],
+        "tags" : [
+            "Software",
+            "Engineer",
+            "Kotlin",
+            "JVM language",
+            "Rust",
+            "Python",
+            "SQL",
+            "Tableau",
+            "Terraform",
+            "HTML",
+            "OpenApi",
+            "Swagger",
+            "Git",
+            "Agile methodology",
+            "JIRA",
+            "AWS",
+            "Amazon Web Services",
+            "HTTP API",
+            "RESTful API",
+            "JWT tokens",
+            "Authentication",
+            "Docker",
+            "Micro services",
+            "Team player",
+            "Stakeholder communication",
+            "Pro-active",
+            "Postgres",
+        ]
+    },
+    "Cambridge Cognition" : {
+        "Company Description" : "A leading neuroscience technology company optimising the assessment of cognition for better brain health with scientifically validated digital health solutions. Enabling efficient clinical trials & improving patient outcomes in conditions affecting brain health. Valued £38mn with 60 employees.",
+        "Role Name" : "Machine Learning Researcher",
+        "Role Type" : "Internship",
+        "Description" : "Continued the research started in my 4th-year project on the automatic scoring of syllable repetition tasks to aid Alzheimer's monitoring & developed a machine learning algorithm.",
+        "Dates" : ["09/08/2021", "17/12/2021"],
+        "tags" : [
+            "Software",
+            "Research",
+            "Scientific papers",
+            "Data cleaning",
+            "Data collection",
+            "Data visualisation",
+            "Signal analysis",
+            "Machine learning",
+            "Gradient boosted decision trees",
+            "XGBoost",
+            "Ensemble",
+            "CNNs",
+            "Convolutional Neural Network",
+            "Transfer learning",
+            "Python",
+            "PyTorch",
+            "PyTest",
+            "Git",
+            "Git LFS",
+            "Data versioning",
+            "Presentation",
+            "Pro-active",
+            "Published poster",
+            "Conference"
+        ]
+    },
+    "Softwire" : {
+        "Company Description" : "A leading digital software development consultancy that offers consultancy, bespoke software development and support.",
+        "Role Name" : "Software Developer Intern",
+        "Role Type" : "Internship",
+        "Description" : "Designed & built Alzheimer's Society remote-minding logistics app in C#",
+        "Dates" : ["01/07/2020", "01/09/2020"],
+        "tags" : [
+            "Software",
+            "C#",
+            "HTML",
+            "CSS",
+            "ASP.NET",
+            "Authentication",
+            "SQL",
+            "Databases",
+            "MungoDB",
+            "Git",
+            "Agile methodology",
+            "JIRA",
+            "Azure Web Services",
+            "Hard work",
+            "Client communication",
+            "Stakeholder communication"
+        ]
+    },
+    "Labman Automation" : {
+        "Company Description" : "",
+        "Role Name" : "Mechanical Engineer Intern",
+        "Role Type" : "",
+        "Description" : "",
+        "Dates" : ["", ""],
+        "tags" : [
+            "",
+            "",
+            "",
+        ]
+    },
+    "Chai AI" : {
+        "Company Description" : "",
+        "Role Name" : "Project work",
+        "Role Type" : "Project work",
+        "Description" : "",
+        "Dates" : ["", ""],
+        "tags" : [
+            "",
+            "",
+            "",
+        ]
+    },
+    "CUED: Structural Design Project" : {
+        "Company Description" : "",
+        "Role Name" : "",
+        "Role Type" : "",
+        "Description" : "",
+        "Dates" : ["", ""],
+        "tags" : [
+            "",
+            "",
+            "",
+        ]
+    },
+    "CUED: " : {
+        "Company Description" : "",
+        "Role Name" : "",
+        "Role Type" : "",
+        "Description" : "",
+        "Dates" : ["", ""],
+        "tags" : [
+            "",
+            "",
+            "",
+        ]
+    },
+    "" : {
+        "Company Description" : "",
+        "Role Name" : "",
+        "Role Type" : "",
+        "Description" : "",
+        "Dates" : ["", ""],
+        "tags" : [
+            "",
+            "",
+            "",
+        ]
+    },
+    "" : {
+        "Company Description" : "",
+        "Role Name" : "",
+        "Role Type" : "",
+        "Description" : "",
+        "Dates" : ["", ""],
+        "tags" : [
+            "",
+            "",
+            "",
+        ]
+    },
+    "" : {
+        "Company Description" : "",
+        "Role Name" : "",
+        "Role Type" : "",
+        "Description" : "",
+        "Dates" : ["", ""],
+        "tags" : [
+            "",
+            "",
+            "",
+        ]
+    },
+    "" : {
+        "Company Description" : "",
+        "Role Name" : "",
+        "Role Type" : "",
+        "Description" : "",
+        "Dates" : ["", ""],
+        "tags" : [
+            "",
+            "",
+            "",
+        ]
+    },
+}
